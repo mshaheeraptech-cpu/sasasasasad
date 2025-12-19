@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>foodmenu</h3>
+    <input type="number" id="menu" placeholder="1= pizza, 2= burger, 3= fries, 4= biryani">
+    <button onclick="selectfood()">select Food</button>
+    <p id="menuresult"></p>
+    <script>
+        function selectfood() {
+            let m = parseInt(document.getElementById("menu").value);
+            let food;
+            switch (m) {
+                case 1:
+                    food = "pizza";
+                    break;
+                case 2:
+                    food = "burger";
+                    break;
+                case 3:
+                    food = "fries";
+                    break;
+                case 4:
+                    food = "biryani";
+                    break;
+                default:
+                    food = "invalid choice";
+            }
+            document.getElementById("menuresult").innerHTML = "you selected: " + food;
+        }
+    </script>
+</body>
+</html>

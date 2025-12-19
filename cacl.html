@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>simple calculator</h1>
+    <p>enter two number</p>
+    <input type="number" id="num1" placeholder="first number">
+    <input type="number 3." id="num2" placeholder="second number">
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+    <p id="result"></p>
+
+    <script>
+        function calculate(operator){
+            let n1 =Number(document.getElementById("num1").value);
+            let n2 =Number(document.getElementById("num2").value);
+            let result;
+            if(operator ==='+') result= n1 + n2;
+            else if(operator ==='*') result= n1 * n2;
+            else if(operator ==='-') result= n1 - n2;
+            else if(operator ==='/') result= n1 / n2;
+            document.getElementById("result").innerHTML= "result"+ result;
+        }
+    </script>
+</body>
+</html>
